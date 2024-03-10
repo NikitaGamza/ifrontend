@@ -1,0 +1,435 @@
+@import './font-face.scss';
+@import './colors.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+small {
+  color: red;
+}
+a {
+  text-decoration: none;
+}
+.burger {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.socials {
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 370px;
+  left: -110px;
+  &__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  &__line {
+    width: 70px;
+    height: 3px;
+    background-color: black;
+  }
+  &__list {
+    display: flex;
+    gap: 10px;
+    &__link {
+      &__img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #ffffffbf;
+  color: white;
+  list-style: none;
+  &__container {
+    background-color: $yellow;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 300px;
+    height: 100%;
+  }
+  &__close {
+    margin-bottom: 20px;
+    position: relative;
+    left: 220px;
+  }
+  &__item {
+    &__link {
+      color: white;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 75px;
+    &__link {
+      &__item {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.showMenu {
+  transform: translateY(0);
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  &__contact {
+    width: 1040px;
+    margin: 0 auto;
+  }
+}
+.promo {
+  background-image: url('/public/img/promo-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  //   background-position: center;
+
+  padding-top: 200px;
+  padding-bottom: 365px;
+  &__me {
+    font-size: 16px;
+    line-height: 36px;
+    background-image: url('/public/img/Circle.png');
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__head {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+    &__btn {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      border: none;
+      background: transparent;
+      &_active {
+        background-color: $yellow;
+        border: none;
+        box-shadow: 0px 4px 4px 0px #00000026;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        padding: 11px 27px 11px 27px;
+      }
+    }
+  }
+}
+.benefit {
+  padding-top: 119px;
+  margin-bottom: 120px;
+  &__title {
+    text-align: center;
+    background-image: url('/public/img/Circle.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  &__head {
+    text-align: center;
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  &__underline {
+    width: 60px;
+    height: 3px;
+    background-color: $yellow;
+    margin: 0 auto;
+    margin-top: 23px;
+    margin-bottom: 65px;
+  }
+  &__resume {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &__group {
+      width: 375px;
+      border-left: 1px solid black;
+
+      &__head {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 0px;
+        margin-bottom: 40px;
+        position: relative;
+        margin-left: 42px;
+        top: -15px;
+      }
+      &__circle {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: -3px;
+        left: -8px;
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        &__wrapper {
+          display: flex;
+          &__line {
+            width: 42px;
+            height: 1px;
+            background-color: black;
+            position: relative;
+            top: 20px;
+          }
+        }
+      }
+      &__info {
+        &__head {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 20px;
+          &__img {
+          }
+          &__wrap {
+            &__title {
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 21px;
+            }
+            &__text {
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 18px;
+            }
+          }
+        }
+        &__text {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+          width: 375px;
+        }
+      }
+    }
+  }
+}
+.contact {
+  display: flex;
+  gap: 70px;
+  padding-bottom: 100px;
+  //   justify-content: space-between;
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    background-image: url('/public/img/Circle.png');
+    background-repeat: no-repeat;
+    padding-left: 13px;
+  }
+  &__head {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  &__underline {
+    width: 60px;
+    border: 3px solid $yellow;
+    margin-bottom: 18px;
+  }
+  &__way {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+  }
+  &__form {
+    margin-top: -10px;
+    &__data {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 10px;
+      &__wrap {
+        width: 280px;
+        &__title {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+          padding-left: 5px;
+          padding-right: 5px;
+          width: fit-content;
+          background-color: white;
+          position: relative;
+          top: 10px;
+          left: 20px;
+        }
+        &__inp {
+          background-color: transparent;
+          border: 1px solid black;
+          height: 45px;
+          width: 100%;
+        }
+      }
+    }
+    &__message {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &__submit {
+      background-color: $yellow;
+      border: none;
+      box-shadow: 0px 4px 4px 0px #00000026;
+      padding: 10px 20px 10px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+    }
+  }
+}
+.success {
+  border: 1px solid green;
+}
+.error {
+  border: 1px solid red;
+}
+@media screen and (max-width: 1260px) {
+  .socials {
+    display: none;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .container {
+    width: 100%;
+    &__contact {
+      width: 100%;
+    }
+  }
+  .contact {
+    justify-content: space-around;
+    &__photo {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 830px) {
+  .benefit {
+    &__resume {
+      &__group {
+        width: 320px;
+        &__info {
+          &__text {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    &__form {
+      &__data {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .promo {
+    padding-top: 200px;
+    padding-bottom: 247px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: url('/public/img/Backgroundmob.png');
+    &__head {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 39px;
+    }
+  }
+  .benefit {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    &__title {
+      margin-bottom: 21px;
+    }
+    &__head {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+    }
+    &__underline {
+      margin-top: 13px;
+      margin-bottom: 44px;
+    }
+
+    &__resume {
+      &__group {
+        margin-bottom: 32px;
+        &__list {
+          gap: 5px;
+        }
+      }
+    }
+  }
+  .contact {
+    padding-left: 10px;
+    padding-right: 10px;
+    &__title {
+      margin-bottom: 18px;
+    }
+    &__head {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+    &__underline {
+      margin-top: 12px;
+    }
+    &__form {
+      &__submit {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

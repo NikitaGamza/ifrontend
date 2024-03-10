@@ -1,0 +1,11 @@
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  font-family: 'Poppins';
+  src: url('./public/font/Poppins-Medium.ttf');
+}
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  font-family: 'PoppinsBold';
+  src: url('./public/font/Poppins-Bold.ttf');
+}
